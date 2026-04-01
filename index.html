@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Эргономика интерфейсов — демонстрация принципов</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#hero" class="logo">Ergo<span>Demo</span></a>
+                <button class="mobile-menu-btn" aria-label="Меню">☰</button>
+                <ul class="nav-links">
+                    <li><a href="#feedback">Обратная связь</a></li>
+                    <li><a href="#clarity">Ясность</a></li>
+                    <li><a href="#control">Контроль</a></li>
+                    <li><a href="#hierarchy">Иерархия</a></li>
+                    <li><a href="#consistency">Согласованность</a></li>
+                    <li><a href="#errors">Предотвращение ошибок</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="container">
+                <h1>Принципы эргономики интерфейсов</h1>
+                <p>Интерактивная демонстрация правил, которые делают цифровые продукты удобными и понятными</p>
+            </div>
+        </section>
+
+        <!-- 1. Обратная связь -->
+        <section id="feedback" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">01</span>
+                    <h2>Обратная связь</h2>
+                </div>
+                <p class="principle-description">Каждое действие пользователя должно получать мгновенный и понятный отклик системы.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <button id="feedbackBtn" class="demo-btn primary-btn">Нажми меня</button>
+                        <div id="feedbackMessage" class="toast-message hidden">✓ Действие выполнено</div>
+                        <p class="demo-hint">Кнопка меняет цвет при наведении и нажатии. Появляется уведомление на 2 секунды.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Ясность и простота -->
+        <section id="clarity" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1694/1694257.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">02</span>
+                    <h2>Ясность и простота</h2>
+                </div>
+                <p class="principle-description">Интерфейс должен быть понятен без дополнительных инструкций. Каждый элемент говорит сам за себя.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <div class="toggle-buttons">
+                            <button id="showBadClarity" class="demo-btn secondary-btn">Плохой пример</button>
+                            <button id="showGoodClarity" class="demo-btn secondary-btn active">Хороший пример</button>
+                        </div>
+                        <div id="clarityExample" class="clarity-example"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Контроль пользователя -->
+        <section id="control" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1264/1264702.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">03</span>
+                    <h2>Контроль пользователя</h2>
+                </div>
+                <p class="principle-description">Пользователь должен чувствовать, что управляет системой, а не наоборот. Отмена и сброс — обязательны.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <div class="control-group">
+                            <input type="text" id="controlInput" placeholder="Напишите что-нибудь...">
+                            <div class="control-actions">
+                                <button id="sendControlBtn" class="demo-btn primary-btn">Отправить</button>
+                                <button id="resetControlBtn" class="demo-btn secondary-btn">Сбросить</button>
+                            </div>
+                        </div>
+                        <div id="controlMessage" class="info-message hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Визуальная иерархия -->
+        <section id="hierarchy" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2760/2760934.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">04</span>
+                    <h2>Визуальная иерархия</h2>
+                </div>
+                <p class="principle-description">Главное должно привлекать внимание в первую очередь. Используйте размер, цвет, контраст и отступы.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <div class="product-card">
+                            <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=400&auto=format" alt="Смартфон" class="product-image">
+                            <div class="product-badge">Хит продаж</div>
+                            <h3 class="product-title">Смартфон XYZ Pro</h3>
+                            <div class="product-price">49 990 ₽</div>
+                            <div class="product-meta">Артикул: 12345 | В наличии: <span class="in-stock">есть</span></div>
+                            <button class="buy-btn primary-btn">Купить</button>
+                        </div>
+                        <p class="demo-hint">Цена и кнопка выделены размером и цветом. Второстепенная информация — нейтральным серым.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Согласованность -->
+        <section id="consistency" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/860/860792.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">05</span>
+                    <h2>Согласованность</h2>
+                </div>
+                <p class="principle-description">Одинаковые элементы выглядят и ведут себя одинаково по всему интерфейсу.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <div class="cards-container">
+                            <div class="feature-card">
+                                <div class="feature-icon">🚀</div>
+                                <h3>Быстрая доставка</h3>
+                                <p>По всей стране за 2 дня</p>
+                                <button class="card-btn secondary-btn">Подробнее</button>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">⭐</div>
+                                <h3>Высокое качество</h3>
+                                <p>Гарантия 2 года</p>
+                                <button class="card-btn secondary-btn">Подробнее</button>
+                            </div>
+                            <div class="feature-card">
+                                <div class="feature-icon">💬</div>
+                                <h3>Поддержка 24/7</h3>
+                                <p>Всегда на связи</p>
+                                <button class="card-btn secondary-btn">Подробнее</button>
+                            </div>
+                        </div>
+                        <p class="demo-hint">Все карточки имеют одинаковую структуру, размеры, стили кнопок и анимацию при наведении.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Предотвращение ошибок -->
+        <section id="errors" class="principle">
+            <div class="container">
+                <div class="principle-header">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1762/1762603.png" alt="" class="principle-icon" loading="lazy">
+                    <span class="principle-number">06</span>
+                    <h2>Предотвращение ошибок</h2>
+                </div>
+                <p class="principle-description">Лучшая ошибка — та, которой удалось избежать. Валидация в реальном времени и подсказки помогают пользователю.</p>
+                <div class="demo-card">
+                    <div class="demo-content">
+                        <form id="registerForm" class="validation-form">
+                            <div class="form-group">
+                                <label for="email">Электронная почта</label>
+                                <input type="email" id="email" placeholder="example@domain.ru" autocomplete="off">
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Пароль (минимум 6 символов)</label>
+                                <input type="password" id="password" placeholder="••••••">
+                                <div class="error-message" id="passwordError"></div>
+                            </div>
+                            <button type="submit" id="submitBtn" class="primary-btn" disabled>Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Демонстрация принципов эргономики. Учебный проект.</p>
+        </div>
+    </footer>
+</body>
+</html>
